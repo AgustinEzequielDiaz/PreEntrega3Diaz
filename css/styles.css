@@ -1,0 +1,459 @@
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Inicio CSS Global */
+
+html {
+    /* etiqueta raíz */
+    /* 1 rem = 16px pero al colocar el font-size en 62.5% seria 1rem = 10px para valores mas redondos*/
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: white;
+    margin:0;
+    padding:0;
+}
+
+header{
+    position:fixed;
+    background-color: white;
+    top:0;
+    z-index: 1;
+    width:100%;
+    height: 10rem;
+    box-shadow: 0px 0px 6px rgb(127 137 161 / 30%);
+}
+
+nav{
+    margin-top: 1.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+footer{
+    background-color: black;
+    text-align:center;
+    height: 8rem;
+    padding-top: 6rem ;
+    box-shadow: 0px 0px 6px rgb(127 137 161 / 30%);
+}
+
+footer p{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* section{
+    margin-top: 15rem;
+} */
+
+h1{
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+a{
+    color: #0a0a0a;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /* sacar subrayado */
+    text-decoration: none;
+
+    /* centrar texto */
+}
+
+/* propiedad para cuando el usuario se posiciona encima de una etiqueta <a></a> con el mouse sin clickear */
+li a:hover{
+    color: #fce045;
+    font-size: 2.1rem;
+}
+
+/* ul{
+    text-align: right;
+} */
+
+.navegacion{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion--left{
+    width: 50%;
+    display: flex;
+}
+
+.navegacion--right{
+    width: 50%;
+    display: flex;
+    /* tambien podria usar el atributo gap: 1.5rem */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion__imagen--logo{
+    width: 17rem;
+    height:7rem;
+}
+
+.letra-naranja{
+    color: orange;
+}
+
+/* Fin CSS Global */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Inicio CSS Index */
+
+.section--banner{
+    margin-top: 12rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.section--informacion{
+    width: 100%;
+    height: 60vh;
+    background-color: #ECDD7B;
+}
+
+.section--informacion div{
+    display: inline;
+    margin-left: 5rem;
+    background-color: #ECDD7B;
+}
+
+.section--informacion div img{
+    margin-top: 4rem;
+    width: 40rem;
+    height: 30rem;
+}
+
+.section--informacion div p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    display: inline;
+}
+
+.section--caracteristicas{
+    margin-top: 0rem;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #197b86; */
+    background-color: #D3E298;
+    text-align: center;
+    /* Opciones de colores
+    rgb(12, 131, 139);
+    rgb(3, 3, 46);  */
+}
+
+.section--caracteristicas div{
+    border: none;
+    /* background-color: #197b86; */
+    background-color: #D3E298;
+    margin-top: 10rem;
+    padding: 2rem;
+}
+
+.section--caracteristicas div img{
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 4rem;
+}
+
+.section--caracteristicas div p{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.imagenPrincipal{
+    width: 100%;
+    height: 100%;
+}
+
+.textoImagen1{
+    position: absolute;
+    color: white;
+    font-size: 4.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-shadow:    1px  0px 0px black,
+                    0px  1px 0px black,
+                    -1px  0px 0px black,
+                    0px -1px 0px black;
+    margin-left: 34rem;
+    margin-top: 20rem;
+    letter-spacing: 0.5rem;
+}
+
+.textoImagen2{
+    position: absolute;
+    color: white;
+    font-size: 4.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-shadow:    1px  0px 0px black,
+                    0px  1px 0px black,
+                    -1px  0px 0px black,
+                    0px -1px 0px black;
+    margin-left: 45rem;
+    margin-top: 30rem;
+    letter-spacing: 0.5rem;
+}
+
+/* Fin CSS Index */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Inicio CSS Contacto */
+
+.section--contacto{
+    margin-top: 11rem;
+    background-color: #197b86;
+    padding-top: 2rem;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.section--contacto p{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 1rem;
+}
+
+.div--left{
+    margin-right: 14rem;
+    margin-top: 2rem;
+}
+
+.div--left label{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.div--left input{
+    margin-left: 1rem;
+}
+
+.div--textarea{
+    margin-top: 2rem;
+}
+
+.div--textarea label{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: black;
+    margin-right: 25rem;
+}
+
+.div--textarea textarea{
+    margin-top: 1rem;
+}
+
+.botonFormulario{
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: .5rem;
+    border-color: black;
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    margin-right: 30rem;
+}
+
+
+
+/* Fin CSS Contacto */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Inicio CSS Galeria */
+
+.section--galeria{
+    margin-top: 16rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.section--galeria img{
+    width: 30rem;
+    height: 22.5rem;
+}
+
+h2{
+    text-align: left;
+    margin-left: 7rem;
+    color: rgb(13, 13, 126);
+    margin-bottom: 2rem;
+}
+
+/* Fin CSS Galeria */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Inicio CSS Productos */
+
+.section--filtros{
+    background-color: white;
+    width: 100%;
+    /* height: 5rem; */
+}
+
+.section--filtros div{
+    margin-top: 13rem;
+    text-align: center;
+    
+}
+
+.section--filtros div input{
+    padding: 1rem;
+    margin-left: 5rem;
+    margin-bottom: 2.5rem;
+    background-color: #fce045;
+    color: black;
+    border-color: #fce045;
+    border-radius: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.section--filtros div input:hover{
+    color: white;
+}
+
+.content__cards{
+    text-align:center;
+    background-color: #197b86;
+    padding-top: 2rem ;
+} 
+
+/* OVERFLOW */
+.card{
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color: white;
+    width: 25rem; /* Ancho */
+    height: 41rem; /* Alto */
+    overflow: hidden;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
+    /* para que las cards se pongan una al lado de la otra */
+    display:inline-block;
+
+    /* para indicar los limites de la card para los elementos internos usamos */
+    /* si no lo hacemos usa como limite el body y se desborda de la card */
+    position: relative;
+}
+
+.card__imagen{
+    width: 20rem; /* Ancho */
+    height: 20rem; /* Alto */
+}
+
+.card__parrafo{
+    font-size: 1.5rem; /* = 15px */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.card__parrafo--precio{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00a650;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.card__boton{
+    margin-top: 1rem;
+    padding: .5rem; 
+}
+
+/* POSITION */
+.oferton{
+    background-color: lightgreen;
+    /* para que no se pase de su padre que es el .card debemos */
+    position:absolute;
+    top:0;
+    left:5rem;
+    padding:.5rem;
+
+}
+
+.lorem{
+    font-size: 1.5rem;
+}
+
+/* Fin CSS Productos */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Inicio CSS Sobre mi */
+
+.section--sobremi{
+    width: 100rw;
+    height: 110rem;
+    background-color: #197b86;
+    margin-top: 11rem;
+    padding-top: 2rem;
+}
+
+.section__img--primera{
+    width: 40rem;
+    height: 50rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    display: block;
+}
+
+.section__img--segunda{
+    width: 40rem;
+    height: 50rem;
+    margin-left: 90rem;
+    margin-top: 2rem ;
+}
+
+
+/* Fin CSS Somos */
+
+/* ------------------------------------------------------------------------------------- */
