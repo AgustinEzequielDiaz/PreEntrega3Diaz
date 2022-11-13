@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- CABEZA -->
-
 <head>
-
-    <!-- METAS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,122 +13,74 @@
     <!-- Para utilizarlas escribimos esta linea -->
     <!-- font-family: 'Roboto', sans-serif; -->
 
-    <!-- LINKS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/logo.png"> <!-- icono de la pestaña del sitio -->
+    <link rel="shortcut icon" href="./img/flor-icono.png">
 
-    <!-- TITULO DE LA PESTAÑA -->
-    <title>Home</title> <!-- titulo de la pestaña -->
+    <link rel="stylesheet" href="./css/styles.css">
 
+    <title>Inicio</title>
 </head>
 
-<!-- CUERPO DEL SITIO -->
+<body id="grilla-body">
+    <header id="header-grilla">
+        <img src="./img/logo-sin-fondo.png" alt="Logo de Samadhi Deco" class="logo">
+        <!-- <img src="./img/logo.png" alt="Logo de Samadhi Deco" class="logo"> -->
 
-<body>
+        <h1>Samadhi Deco</h1>
 
-    <!-- CABECERA -->
-    <header>
-        <!-- MENÚ DE NAVEGACIÓN -->
+        <!-- atajo rapido ul>li*3>a -->
         <nav>
-
-            <!-- <a href="../index.html"><img class="navegacion__logo" src="../images/logo.png"
-                alt="Logo Samadhi Deco"></a> -->
-
-            <!-- LISTA DE OPCIONES -->
-            <ul class="navegacion">
-                <!-- OPCIONES LINKEADAS ENTRE SI -->
-                <div class="navegacion--left">
-                    <li>
-                        <a href="index.html"><img class="navegacion__imagen--logo" src="images/logo.png"
-                                alt="Logo Samadhi Deco"></a>
-                    </li>
-                </div>
-
-                <div class="navegacion--right">
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a href="pages/productos.html">Productos</a>
-                    </li>
-
-                    <li>
-                        <a href="pages/somos.html">Sobre mi</a>
-                    </li>
-
-                    <li>
-                        <a href="pages/galeria.html">Galeria</a>
-                    </li>
-
-                    <li>
-                        <a href="pages/contacto.html">Contacto</a>
-                    </li>
-                </div>
-
+            <ul id="navegacion-grilla">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/galeria.html">Galeria</a></li>
+                <li><a href="./pages/sobremi.html">Sobre mi</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   
 
-    <main>
-        <!-- PRIMER SECCIÓN DEL SITIO -->
-        <section class="section--banner">
-
-            <a href="" class="textoImagen1">DECORACIÓN DE INTERIORES </a>
-            <a href="" class="textoImagen2">Y ESPACIOS VERDES</a>
-            <img class="imagenPrincipal" src="images/imagenPrincipal.jpeg" alt="Decoracion living">
-
+    <!-- <main> -->
+        <!-- Section de las cards de producto -->
+        <section id="productos-grilla">
+            <h2>BIENVENIDO</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, architecto fuga dolores ab soluta sit natus minus eum consectetur hic sunt adipisci libero cumque aliquam provident dicta officia explicabo alias.</p>
         </section>
 
-        <!-- SEGUNDO SECCIÓN DEL SITIO -->
-        <section class="section--informacion">
+        <!-- Section de un banner -->
+        <section id="banner-grilla">
+            <h2>PRODUCTOS DE LA MEJOR CALIDAD</h2>
 
-            <div class="">
-                <img src="./images/decoracion-interior.webp" alt="">
-                <p>Aun no logre comenzar el texto desde arriba</p>
+            <div class="padre-banners">
+                <!-- BANNER 1 -->
+                <div class="banners-caracteristicas">
+                    <h3>Telas</h3>
+                    <p>Nuestras telas son de la mejor calidad</p>
+                </div>
+
+                <!-- BANNER 2 -->
+                <div class="banners-caracteristicas">
+                    <h3>Talles</h3>
+                    <p>Gran variedad de talles y medidas</p>
+                </div>
+
+                <!-- BANNER 3 -->
+                <div class="banners-caracteristicas">
+                    <h3>Colores</h3>
+                    <p>Todos tus colores preferidos</p>
+                </div>
+
+                <!-- BANNER 4 -->
+                <div class="banners-caracteristicas">
+                    <h3>Precios</h3>
+                    <p>Los mejores precios del mercado</p>
+                </div>
             </div>
-
-            <div class="">
-                <img src="./images/local-blanqueria.jpg" alt="">
-                <p>Aun no logre comenzar el texto desde arriba</p>
-            </div>
-
         </section>
+    <!-- </main> -->
 
-        <!-- TERCER SECCIÓN DEL SITIO -->
-        <section class="section--caracteristicas">
-
-            <div class="card">
-                <img src="./images/brillante.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate temporibus odio, tenetur
-                    facilis, eius quas quis, ducimus dolorem exercitationem voluptates ipsum praesentium numquam. Vero,
-                    et? Aliquam suscipit minus laborum.</p>
-            </div>
-
-            <div class="card">
-                <img src="./images/decoracion-de-la-casa.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate temporibus odio, tenetur
-                    facilis, eius quas quis, ducimus dolorem exercitationem voluptates ipsum praesentium numquam. Vero,
-                    et? Aliquam suscipit minus laborum.</p>
-            </div>
-
-            <div class="card">
-                <img src="./images/hoja-de-monstera.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptate temporibus odio, tenetur
-                    facilis, eius quas quis, ducimus dolorem exercitationem voluptates ipsum praesentium numquam. Vero,
-                    et? Aliquam suscipit minus laborum.</p>
-            </div>
-
-        </section>
-    </main>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>Sitio web de Agustin Diaz. Copyright</p>
+    <footer id="footer-grilla">
+        <p>Derechos reservados</p>
     </footer>
-
-
-
 </body>
 
 </html>

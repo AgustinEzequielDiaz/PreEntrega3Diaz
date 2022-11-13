@@ -1,273 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- CABEZA -->
-
 <head>
-
-    <!-- METAS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- LINKS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="shortcut icon" href="../images/logo.png"> <!-- icono de la pestaña del sitio -->
 
     <title>Productos</title>
-
 </head>
 
-<!-- CUERPO -->
+<body id="grilla-body">
+    <header id="header-grilla">
+        <img src="../img/logo-sin-fondo.png" alt="Logo de Samadhi Deco" class="logo">
+        <!-- <img src="./img/logo.png" alt="Logo de Samadhi Deco" class="logo"> -->
 
-<body>
-    <!-- CABECERA -->
-    <header>
-        <!-- BARRA DE NAVEGACION -->
+        <h1>Samadhi Deco</h1>
+
+        <!-- atajo rapido ul>li*3>a -->
         <nav>
-
-            <!-- <a href="../index.html"><img class="navegacion__logo" src="../images/logo.png"
-                alt="Logo Samadhi Deco"></a> -->
-
-            <!-- LISTA DE OPCIONES -->
-            <ul class="navegacion">
-                <!-- OPCIONES LINKEADAS ENTRE SI -->
-                <div class="navegacion--left">
-                    <li>
-                        <a href="../index.html"><img class="navegacion__imagen--logo" src="../images/logo.png"
-                            alt="Logo Samadhi Deco"></a>
-                    </li>
-                </div>
-
-                <div class="navegacion--right">
-                    <li>
-                        <a href="../index.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a href="productos.html">Productos</a>
-                    </li>
-
-                    <li>
-                        <a href="somos.html">Sobre mi</a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">Galeria</a>
-                    </li>
-
-                    <li>
-                        <a href="contacto.html">Contacto</a>
-                    </li>
-                </div>
-
+            <ul id="navegacion-grilla">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./galeria.html">Galeria</a></li>
+                <li><a href="./sobremi.html">Sobre mi</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   
 
-    <!-- INICIO PRIMER SECCIÓN DEL SITIO -->
-    <section class="section--filtros">
-        
-        <div>
-            <input type="button" value="ACOLCHADOS">
-            <input type="button" value="MANTAS">
-            <input type="button" value="SILLONES">
-            <input type="button" value="SABANAS">
-            <input type="button" value="TOALLAS">
-            <input type="button" value="CORTINAS">
-            <input type="button" value="FRAZADAS">
-            <input type="button" value="CAMAS">
-        </div>
+    <!-- <main> -->
+        <!-- Section de las cards de producto -->
+        <section id="productos-grilla">
+            <h2>BIENVENIDO A NUESTRA TIENDA ONLINE</h2>
+            <p>Estos son todos los productos que tenemos para ofrecerte</p>
 
-    </section>
-    <!-- FIN PRIMER SECCIÓN DEL SITIO -->
+            <div class="padre-cards">
+                <!-- CARD 1 -->
+                <div class="card-hijo">
+                    <img src="../img/acolchado.jpg" alt="acolchado">
+                    <p>Acolchado gris</p>
+                    <p>$23.500</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
 
-    <!-- INICIO SEGUNDA SECCIÓN DEL SITIO -->
-    <section>
-        
-        
-        <!-- BEM -->
-        <div class="content__cards">
+                <!-- CARD 2 -->
+                <div class="card-hijo">
+                    <img src="../img/cama-spiderman.jfif" alt="cama spiderman">
+                    <p>Frazada Spiderman</p>
+                    <p>$15.500</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
 
-            <h1>NUESTROS PRODUCTOS</h1>
+                <!-- CARD 3 -->
+                <div class="card-hijo">
+                    <img src="../img/sabanas-blancas.webp" alt="sabanas blancas">
+                    <p>Sabanas blancas</p>
+                    <p>$18.250</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
 
-            <div class="card">
-                <!-- BLOQUE -->
+                <!-- CARD 4 -->
+                <div class="card-hijo">
+                    <img src="../img/toallas.jfif" alt="toallas">
+                    <p>Toallas</p>
+                    <p>$5.500</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
 
-                <img src="../images/acolchado.jpg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
+                <!-- CARD 5 -->
+                <div class="card-hijo">
+                    <img src="../img/toallas2.jfif" alt="toallas">
+                    <p>Toallas</p>
+                    <p>$6.999</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
 
-                <p class="card__parrafo">ACOLCHADO INVIERNO</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
+                <!-- CARD 6 -->
+                <div class="card-hijo">
+                    <img src="../img/toallas3.jpeg" alt="toallas">
+                    <p>Toallas</p>
+                    <p>$3.200</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima nam totam itaque, error cumque quis ea inventore sint assumenda nihil quod placeat dolores optio quia iure? Placeat, consectetur explicabo.</p>
+                
+                    <button>Agregar al carrito</button>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <!-- BLOQUE -->
+        <!-- Section de un banner -->
+        <section id="banner-grilla">
+            <h2>Productos de la mejor calidad</h2>
 
-                <img src="../images/cama-spiderman.jfif" alt="cama spiderman" class="card__imagen"><!-- ELEMENTO -->
+            <div class="padre-banners">
+                <!-- BANNER 1 -->
+                <div class="banners-caracteristicas">
+                    <h3>Telas</h3>
+                    <p>Nuestras telas son de la mejor calidad</p>
+                </div>
 
-                <p class="card__parrafo">ACOLCHADO SPIDERMAN</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color rojo azul y negro. 2 plazas.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
+                <!-- BANNER 2 -->
+                <div class="banners-caracteristicas">
+                    <h3>Talles</h3>
+                    <p>Gran variedad de talles y medidas</p>
+                </div>
 
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
+                <!-- BANNER 3 -->
+                <div class="banners-caracteristicas">
+                    <h3>Colores</h3>
+                    <p>Todos tus colores preferidos</p>
+                </div>
 
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
+                <!-- BANNER 4 -->
+                <div class="banners-caracteristicas">
+                    <h3>Precios</h3>
+                    <p>Los mejores precios del mercado</p>
+                </div>
             </div>
+        </section>
+    <!-- </main> -->
 
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/decoracion1.jpeg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">MANTA</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color blanco y negro. 1 plaza y 1/2.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/decoracion2.jpeg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">SILLON</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. Formato L.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$200.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/decoracion3.jpeg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/decoracion5.jpeg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/sabanas-blancas.webp" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/sabanas-grises.webp" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/sabanas-rayadas-colores.jpg" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/toallas.jfif" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-            <div class="card">
-                <!-- BLOQUE -->
-
-                <img src="../images/toallas2.jfif" alt="acolchado gris" class="card__imagen"><!-- ELEMENTO -->
-
-                <p class="card__parrafo">Acolchado</p><!-- ELEMENTO -->
-                <p class="card__parrafo">Color gris. 2 plazas. Grueso.</p><!-- ELEMENTO -->
-                <p class="card__parrafo--precio">$20.000</p><!-- MODIFICADOR -->
-
-                <button class="card__boton">COMPRAR</button><!-- ELEMENTO -->
-
-                <h2 class="oferton">20% DE DESCUENTO</h2>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- FIN SEGUNDA SECCION DEL SITIO -->
-
-    <!-- PIE DE PAGINA -->
-    <footer>
-
-        <p>Sitio web de Agustin Diaz. Copyright</p>
-
+    <footer id="footer-grilla">
+        <p>Derechos reservados</p>
     </footer>
-
 </body>
 
 </html>

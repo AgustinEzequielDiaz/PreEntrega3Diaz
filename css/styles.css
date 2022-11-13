@@ -1,459 +1,275 @@
-
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Inicio CSS Global */
+/* CSS GRIDS */
 
 html {
     /* etiqueta raíz */
     /* 1 rem = 16px pero al colocar el font-size en 62.5% seria 1rem = 10px para valores mas redondos*/
     /* 1rem = 10px */
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
     scroll-behavior: smooth;
 }
 
-body{
-    background: white;
-    margin:0;
-    padding:0;
-}
-
-header{
-    position:fixed;
-    background-color: white;
-    top:0;
-    z-index: 1;
-    width:100%;
-    height: 10rem;
-    box-shadow: 0px 0px 6px rgb(127 137 161 / 30%);
-}
-
-nav{
-    margin-top: 1.7rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-
-
-footer{
-    background-color: black;
-    text-align:center;
-    height: 8rem;
-    padding-top: 6rem ;
-    box-shadow: 0px 0px 6px rgb(127 137 161 / 30%);
-}
-
-footer p{
+/* le quitamos el formato de vinculo a la etiqueta <a> */
+a{
+    text-decoration: none;
     color: white;
-    font-size: 2rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-/* section{
-    margin-top: 15rem;
-} */
-
-h1{
-    color: white;
-}
-
-img{
-    max-width: 100%;
-}
-
+/* quitamos las viñatas a las <ul> */
 ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     list-style: none;
 }
 
-h1{
-    font-size: 2rem;
-    text-align: center;
+img{
+    max-width: 100%; /* hace responsive nuestra imagen, asi el navegador no la pisa */
 }
 
-a{
-    color: #0a0a0a;
-    font-size: 2rem;
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+p{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    /* sacar subrayado */
-    text-decoration: none;
-
-    /* centrar texto */
 }
 
-/* propiedad para cuando el usuario se posiciona encima de una etiqueta <a></a> con el mouse sin clickear */
-li a:hover{
-    color: #fce045;
-    font-size: 2.1rem;
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* DESKTOP FIRST */ /* se trabaja con MAX-WIDTH, en MOBILE FIRST se trabaja con MIN-WIDTH */
+/* grilla principal */
+#grilla-body{
+    display: grid;
+
+    grid-template-areas: /* las comillas dobles nos separan las areas */
+    "header header header" /* tres veces porque lo queremos de 3 columnas */
+    "producto producto producto"
+    "banner banner banner"
+    "footer footer footer";
+
+    grid-template-columns: repeat(3, 1fr); /* en fracciones le damos el tamaño de las columnas */
+
+    background-color: lightgreen;
 }
 
-/* ul{
-    text-align: right;
-} */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-.navegacion{
-    display:flex;
-    flex-wrap: nowrap;
+/* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
+/* header */
+#header-grilla{
+    grid-area: header; /* asi le indicamos al grid-template-areas creado en #grilla-body que este es el header */
+    display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.navegacion--left{
-    width: 50%;
-    display: flex;
+/* productos */
+#productos-grilla{
+    grid-area: producto;
+    margin-top: 1rem;
 }
 
-.navegacion--right{
-    width: 50%;
-    display: flex;
-    /* tambien podria usar el atributo gap: 1.5rem */
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navegacion__imagen--logo{
-    width: 17rem;
-    height:7rem;
-}
-
-.letra-naranja{
-    color: orange;
-}
-
-/* Fin CSS Global */
-
-/* ------------------------------------------------------------------------------------- */
-
-/* Inicio CSS Index */
-
-.section--banner{
-    margin-top: 12rem;
-    width: 100%;
-    height: 100vh;
-}
-
-.section--informacion{
-    width: 100%;
-    height: 60vh;
-    background-color: #ECDD7B;
-}
-
-.section--informacion div{
-    display: inline;
-    margin-left: 5rem;
-    background-color: #ECDD7B;
-}
-
-.section--informacion div img{
+/* banner */
+#banner-grilla{
+    grid-area: banner;
+    background-color: #eaeaea;
     margin-top: 4rem;
-    width: 40rem;
-    height: 30rem;
-}
-
-.section--informacion div p{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    display: inline;
-}
-
-.section--caracteristicas{
-    margin-top: 0rem;
-    width: 100%;
-    height: 100vh;
-    /* background-color: #197b86; */
-    background-color: #D3E298;
-    text-align: center;
-    /* Opciones de colores
-    rgb(12, 131, 139);
-    rgb(3, 3, 46);  */
-}
-
-.section--caracteristicas div{
-    border: none;
-    /* background-color: #197b86; */
-    background-color: #D3E298;
-    margin-top: 10rem;
     padding: 2rem;
 }
 
-.section--caracteristicas div img{
-    width: 15rem;
+/* footer */
+#footer-grilla{
+    grid-area: footer;
+    text-align: center;
+}
+/* FIN DE LA DEFINICIÓN DE ÁREAS */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/*  INICIO HEADER */
+/*  estilos header */
+#navegacion-grilla{
+    display: flex;
+    gap: .8rem;
+}
+
+#navegacion-grilla li{
+    background-color: lightseagreen;
+    padding: .5rem 1rem;
+}
+
+.logo{
+    height: 6rem;
+    width: 13rem;
+}
+
+/* queries header */
+
+@media screen and (max-width: 767px){
+    #header-grilla{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 399px){
+    #navegacion-grilla{
+        flex-direction: column;
+    }
+}
+/* FIN HEADER */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO MAIN */
+/* estilos section productos */
+#productos-grilla h2,
+#productos-grilla p{
+    text-align: center;
+}
+
+.padre-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* coloca 3 cards por fila, osea en 3 columnas */
+    row-gap: 2rem; /* para separar las filas una de otra, separa las cards */
+    justify-items: center;
+}
+
+.card-hijo{
+    cursor: pointer;
+    width: 16rem;
+    border: solid 2px white;
+    display: flex; /* flex para poder centrar o acomodar todo a nuestro gusto */
+    flex-direction: column; /* los elementos en columna */
+    align-items: center; /* alineamos todos los elementos dentro de la card al centro */
+    padding: 1rem; /* para separarlo de los bordes de la card */
+}
+
+.card-hijo img{
+    width: 20rem;
     height: 15rem;
-    margin-bottom: 4rem;
 }
 
-.section--caracteristicas div p{
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+/* queries section productos */
+
+@media screen and (max-width: 895px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr); /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */
+    }
 }
 
-.imagenPrincipal{
-    width: 100%;
-    height: 100%;
+@media screen and (max-width: 767px){
+    .padre-cards{
+        display: flex; /* lo pasamos a flex en pantallas mas chicas porque no necesitamos acomodarlos en columnas sino uno abajo del otro */
+        flex-direction: column; /* y colocamos en columnas */
+        align-items: center;
+    }
 }
 
-.textoImagen1{
-    position: absolute;
-    color: white;
-    font-size: 4.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    text-shadow:    1px  0px 0px black,
-                    0px  1px 0px black,
-                    -1px  0px 0px black,
-                    0px -1px 0px black;
-    margin-left: 34rem;
-    margin-top: 20rem;
-    letter-spacing: 0.5rem;
-}
-
-.textoImagen2{
-    position: absolute;
-    color: white;
-    font-size: 4.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    text-shadow:    1px  0px 0px black,
-                    0px  1px 0px black,
-                    -1px  0px 0px black,
-                    0px -1px 0px black;
-    margin-left: 45rem;
-    margin-top: 30rem;
-    letter-spacing: 0.5rem;
-}
-
-/* Fin CSS Index */
-
-/* ------------------------------------------------------------------------------------- */
-
-/* Inicio CSS Contacto */
-
-.section--contacto{
-    margin-top: 11rem;
-    background-color: #197b86;
-    padding-top: 2rem;
-    text-align: center;
-    padding-bottom: 5rem;
-}
-
-.section--contacto p{
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: white;
-    margin-top: 1rem;
-}
-
-.div--left{
-    margin-right: 14rem;
-    margin-top: 2rem;
-}
-
-.div--left label{
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: black;
-}
-
-.div--left input{
-    margin-left: 1rem;
-}
-
-.div--textarea{
-    margin-top: 2rem;
-}
-
-.div--textarea label{
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: black;
-    margin-right: 25rem;
-}
-
-.div--textarea textarea{
-    margin-top: 1rem;
-}
-
-.botonFormulario{
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: .5rem;
-    border-color: black;
-    background-color: black;
-    color: white;
-    margin-top: 2rem;
-    margin-right: 30rem;
-}
-
-
-
-/* Fin CSS Contacto */
-
-/* ------------------------------------------------------------------------------------- */
-
-/* Inicio CSS Galeria */
-
-.section--galeria{
-    margin-top: 16rem;
-    margin-bottom: 5rem;
+/* estilos section banner */
+#banner-grilla h2{
     text-align: center;
 }
 
-.section--galeria img{
-    width: 30rem;
-    height: 22.5rem;
+.padre-banners{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
 }
 
-h2{
-    text-align: left;
-    margin-left: 7rem;
-    color: rgb(13, 13, 126);
-    margin-bottom: 2rem;
+.banners-caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Fin CSS Galeria */
+/* queries section banner */
 
-/* ------------------------------------------------------------------------------------- */
-
-/* Inicio CSS Productos */
-
-.section--filtros{
-    background-color: white;
-    width: 100%;
-    /* height: 5rem; */
+@media screen and (max-width: 992px){
+    .padre-banners{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.section--filtros div{
-    margin-top: 13rem;
-    text-align: center;
-    
+@media screen and (max-width: 767px){
+    .padre-banners{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.section--filtros div input{
-    padding: 1rem;
-    margin-left: 5rem;
-    margin-bottom: 2.5rem;
-    background-color: #fce045;
-    color: black;
-    border-color: #fce045;
-    border-radius: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
+/* FIN MAIN */
 
-.section--filtros div input:hover{
-    color: white;
-}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-.content__cards{
-    text-align:center;
-    background-color: #197b86;
-    padding-top: 2rem ;
-} 
+/* INICIO FOOTER */
+/* estilos footer */
 
-/* OVERFLOW */
-.card{
-    border: solid 1px white;
-    border-radius: 5px;
-    background-color: white;
-    width: 25rem; /* Ancho */
-    height: 41rem; /* Alto */
-    overflow: hidden;
-    margin-left: 5rem;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+/* queries footer */
 
-    /* para que las cards se pongan una al lado de la otra */
-    display:inline-block;
+/* FIN FOOTER */
 
-    /* para indicar los limites de la card para los elementos internos usamos */
-    /* si no lo hacemos usa como limite el body y se desborda de la card */
-    position: relative;
-}
 
-.card__imagen{
-    width: 20rem; /* Ancho */
-    height: 20rem; /* Alto */
-}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-.card__parrafo{
-    font-size: 1.5rem; /* = 15px */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 2rem;
-}
 
-.card__parrafo--precio{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #00a650;
-    text-align: center;
-    margin-top: 5rem;
-}
+/* PRUEBA GRID */
 
-.card__boton{
-    margin-top: 1rem;
-    padding: .5rem; 
-}
 
-/* POSITION */
-.oferton{
+/* grilla principal */
+#grilla-body-prueba{
+    display: grid;
+
+    grid-template-areas: /* las comillas dobles nos separan las areas */
+    "cabecera cabecera cabecera cabecera" /* tres veces porque lo queremos de 3 columnas */
+    "cabecera productos productos productos"
+    "cabecera panel panel panel"
+    "cabecera pie pie pie";
+
+    grid-template-columns: repeat(4, 1fr); /* en fracciones le damos el tamaño de las columnas */
+
     background-color: lightgreen;
-    /* para que no se pase de su padre que es el .card debemos */
-    position:absolute;
-    top:0;
-    left:5rem;
-    padding:.5rem;
-
 }
 
-.lorem{
-    font-size: 1.5rem;
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
+/* header */
+#header-grilla-prueba{
+    grid-area: cabecera; /* asi le indicamos al grid-template-areas creado en #grilla-body que este es el header */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* Fin CSS Productos */
-
-/* ------------------------------------------------------------------------------------- */
-
-/* Inicio CSS Sobre mi */
-
-.section--sobremi{
-    width: 100rw;
-    height: 110rem;
-    background-color: #197b86;
-    margin-top: 11rem;
-    padding-top: 2rem;
+/* productos */
+#productos-grilla-prueba{
+    grid-area: productos;
+    margin-top: 1rem;
 }
 
-.section__img--primera{
-    width: 40rem;
-    height: 50rem;
-    margin-left: 5rem;
-    margin-top: 2rem;
-    display: block;
+/* banner */
+#banner-grilla-prueba{
+    grid-area: panel;
+    background-color: #eaeaea;
+    margin-top: 4rem;
+    padding: 2rem;
 }
 
-.section__img--segunda{
-    width: 40rem;
-    height: 50rem;
-    margin-left: 90rem;
-    margin-top: 2rem ;
+/* footer */
+#footer-grilla-prueba{
+    grid-area: pie;
+    text-align: center;
 }
+/* FIN DE LA DEFINICIÓN DE ÁREAS */
 
-
-/* Fin CSS Somos */
-
-/* ------------------------------------------------------------------------------------- */
