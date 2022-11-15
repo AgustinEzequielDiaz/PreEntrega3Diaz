@@ -23,9 +23,10 @@ ul{
 
 img{
     max-width: 100%; /* hace responsive nuestra imagen, asi el navegador no la pisa */
-}
+} 
 
 h1{
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -273,3 +274,7 @@ p{
 }
 /* FIN DE LA DEFINICIÓN DE ÁREAS */
 
+
+/* INICIO MODIFICACION CSS BOOTSTRAP */
+
+/* FIN MODIFICACION CSS BOOTSTRAP */
