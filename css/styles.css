@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    padding-top: 106px;
+}
+
 /* le quitamos el formato de vinculo a la etiqueta <a> */
 a{
     text-decoration: none;
@@ -68,9 +72,6 @@ p{
 /* header */
 #header-grilla{
     grid-area: header; /* asi le indicamos al grid-template-areas creado en #grilla-body que este es el header */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 /* productos */
