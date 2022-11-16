@@ -113,6 +113,10 @@ p{
     width: 13rem;
 }
 
+.funcionesHeader{
+    gap: 1rem;
+}
+
 /* queries header */
 
 @media screen and (max-width: 767px){
@@ -214,6 +218,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .2rem;
 }
 
 /* queries section banner */
