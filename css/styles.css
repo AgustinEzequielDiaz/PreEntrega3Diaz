@@ -47,7 +47,6 @@ p{
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-/* DESKTOP FIRST */ /* se trabaja con MAX-WIDTH, en MOBILE FIRST se trabaja con MIN-WIDTH */
 /* grilla principal */
 #grilla-body{
     display: grid;
@@ -60,7 +59,7 @@ p{
 
     grid-template-columns: repeat(3, 1fr); /* en fracciones le damos el tamaño de las columnas */
 
-    background-color: lightgreen;
+    background-color: white;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -77,7 +76,6 @@ p{
 /* productos */
 #productos-grilla{
     grid-area: producto;
-    margin-top: 1rem;
 }
 
 /* banner */
@@ -110,7 +108,7 @@ p{
 }
 
 .logo{
-    height: 6rem;
+    height: 5rem;
     width: 13rem;
 }
 
@@ -160,11 +158,25 @@ p{
     height: 15rem;
 }
 
+.imagenCarrousel{
+    height: 750px;
+}
+
 /* queries section productos */
+
+@media screen and (max-width: 1300px){
+    .imagenCarrousel{
+        height: 500px;
+    }
+}
 
 @media screen and (max-width: 895px){
     .padre-cards{
         grid-template-columns: repeat(2, 1fr); /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */
+    }
+
+    .imagenCarrousel{
+        height: 550px;
     }
 }
 
@@ -173,6 +185,16 @@ p{
         display: flex; /* lo pasamos a flex en pantallas mas chicas porque no necesitamos acomodarlos en columnas sino uno abajo del otro */
         flex-direction: column; /* y colocamos en columnas */
         align-items: center;
+    }
+
+    .imagenCarrousel{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .imagenCarrousel{
+        height: 200px;
     }
 }
 
@@ -220,59 +242,7 @@ p{
 
 /* FIN FOOTER */
 
-
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-
-
-/* PRUEBA GRID */
-
-
-/* grilla principal */
-#grilla-body-prueba{
-    display: grid;
-
-    grid-template-areas: /* las comillas dobles nos separan las areas */
-    "cabecera cabecera cabecera cabecera" /* tres veces porque lo queremos de 3 columnas */
-    "cabecera productos productos productos"
-    "cabecera panel panel panel"
-    "cabecera pie pie pie";
-
-    grid-template-columns: repeat(4, 1fr); /* en fracciones le damos el tamaño de las columnas */
-
-    background-color: lightgreen;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-
-/* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
-/* header */
-#header-grilla-prueba{
-    grid-area: cabecera; /* asi le indicamos al grid-template-areas creado en #grilla-body que este es el header */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* productos */
-#productos-grilla-prueba{
-    grid-area: productos;
-    margin-top: 1rem;
-}
-
-/* banner */
-#banner-grilla-prueba{
-    grid-area: panel;
-    background-color: #eaeaea;
-    margin-top: 4rem;
-    padding: 2rem;
-}
-
-/* footer */
-#footer-grilla-prueba{
-    grid-area: pie;
-    text-align: center;
-}
-/* FIN DE LA DEFINICIÓN DE ÁREAS */
 
 
 /* INICIO MODIFICACION CSS BOOTSTRAP */
