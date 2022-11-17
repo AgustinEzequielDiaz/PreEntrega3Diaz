@@ -79,6 +79,7 @@ p{
 /* caracteristicas */
 #caracteristicas-grilla{
     grid-area: caracteristicas;
+    background-color: cornsilk;
 }
 
 /* banner */
@@ -101,7 +102,7 @@ p{
     text-align: center;
     background-color: #eaeaea;
     padding: 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 /* FIN DE LA DEFINICIÓN DE ÁREAS */
 
@@ -112,11 +113,6 @@ p{
 #navegacion-grilla{
     display: flex;
     gap: .8rem;
-}
-
-#navegacion-grilla li{
-    background-color: lightseagreen;
-    padding: .5rem 1rem;
 }
 
 .logo{
@@ -188,19 +184,23 @@ p{
 }
 
 /* estilos section caracteristicas */
-#caracteristicas-grilla h2,
-#caracteristicas-grilla p{
-    text-align: center;
+#caracteristicas-grilla h2{
+    text-align: center; 
 }
 
 #caracteristicas-grilla h1{
     padding-top: 2rem;
 }
 
+.sectionProductos{
+    padding-bottom: 3rem;
+    text-align: center ;
+}
+
 .padre-cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; 
     justify-items: center;
 }
 
@@ -217,14 +217,15 @@ p{
 .card-hijo-bootstrap{
     cursor: pointer;
     width: 18rem;
-    height: 30rem;
+    height: 24rem; /* 24rem */
     align-items: center;
     margin-top: 2rem;
+    background-color: #eaeaea;
 }
 
 .card-hijo-bootstrap img{
     width: 15rem;
-    height: 15rem;
+    height: 13rem; /* 13rem */
     margin-top: 1rem;
 }
 
@@ -237,7 +238,17 @@ p{
     height: 750px;
 }
 
+.card-body{
+    font-size: 12px; 
+    text-align: start;
+}
+
 /* queries section caracteristicas */
+@media screen and (max-width: 1540px){
+    .padre-cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 @media screen and (max-width: 1300px){
     .imagenCarrousel{
@@ -248,7 +259,6 @@ p{
 @media screen and (max-width: 1267px){
     .padre-cards{
         grid-template-columns: repeat(3, 1fr);
-        
     }
 }
 
@@ -334,6 +344,7 @@ p{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 2rem;
     }
 
     #padre-formulario p:nth-child(1){
