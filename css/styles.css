@@ -1,10 +1,6 @@
 /* CSS GRIDS */
 
 html {
-    /* etiqueta raíz */
-    /* 1 rem = 16px pero al colocar el font-size en 62.5% seria 1rem = 10px para valores mas redondos*/
-    /* 1rem = 10px */
-    /* font-size: 62.5%; */
     scroll-behavior: smooth;
 }
 
@@ -12,7 +8,6 @@ body{
     padding-top: 106px;
 }
 
-/* le quitamos el formato de vinculo a la etiqueta <a> */
 a{
     text-decoration: none;
     color: white;
@@ -20,13 +15,12 @@ a{
     font-weight: 400;
 }
 
-/* quitamos las viñatas a las <ul> */
 ul{
     list-style: none;
 }
 
 img{
-    max-width: 100%; /* hace responsive nuestra imagen, asi el navegador no la pisa */
+    max-width: 100%;
 } 
 
 h1{
@@ -55,13 +49,14 @@ p{
 #grilla-body{
     display: grid;
 
-    grid-template-areas: /* las comillas dobles nos separan las areas */
-    "header header header" /* tres veces porque lo queremos de 3 columnas */
-    "producto producto producto"
+    grid-template-areas: 
+    "header header header" 
+    "caracteristicas caracteristicas caracteristicas"
     "banner banner banner"
+    "formulario formulario formulario"
     "footer footer footer";
 
-    grid-template-columns: repeat(3, 1fr); /* en fracciones le damos el tamaño de las columnas */
+    grid-template-columns: repeat(3, 1fr);
 
     background-color: white;
 }
@@ -71,26 +66,35 @@ p{
 /* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
 /* header */
 #header-grilla{
-    grid-area: header; /* asi le indicamos al grid-template-areas creado en #grilla-body que este es el header */
+    grid-area: header;
 }
 
-/* productos */
-#productos-grilla{
-    grid-area: producto;
+/* caracteristicas */
+#caracteristicas-grilla{
+    grid-area: caracteristicas;
 }
 
 /* banner */
 #banner-grilla{
     grid-area: banner;
     background-color: #eaeaea;
-    margin-top: 4rem;
-    padding: 2rem;
+    margin-top: 1rem;
+    padding: 4rem;
+}
+
+/* formulario */
+#formulario-grilla{
+    grid-area: formulario;
+    margin-top: 2rem;
 }
 
 /* footer */
 #footer-grilla{
     grid-area: footer;
     text-align: center;
+    background-color: #eaeaea;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 /* FIN DE LA DEFINICIÓN DE ÁREAS */
 
@@ -117,15 +121,16 @@ p{
     gap: 1rem;
 }
 
-/* queries header */
+.nombreEmpresa{
+    color: black;
+}
 
+/* queries header */
 @media screen and (max-width: 992px){
     .funcionesHeader{
         flex-direction: row;
-    }
-    .botonColapsable{
-        margin-left: 0 !important;
         order: -1;
+        margin-left: 0 !important;
     }
 }
 
@@ -136,19 +141,17 @@ p{
 }
 
 @media screen and (max-width: 520px){
-    .logo{
-        display: none;
+    .iconosAcciones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
     }
 
-    nav{
-        height: 6rem;
-    }
-}
-
-@media screen and (max-width: 450px){
     .logo{
-        height: 3.5rem;
-        width: 9rem;
+        width: 10rem;
+        height: 4.5rem;
     }
 }
 
@@ -162,16 +165,16 @@ p{
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 /* INICIO MAIN */
-/* estilos section productos */
-#productos-grilla h2,
-#productos-grilla p{
+/* estilos section caracteristicas */
+#caracteristicas-grilla h2,
+#caracteristicas-grilla p{
     text-align: center;
 }
 
 .padre-cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* coloca 3 cards por fila, osea en 3 columnas */
-    row-gap: 2rem; /* para separar las filas una de otra, separa las cards */
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem; 
     justify-items: center;
 }
 
@@ -194,7 +197,7 @@ p{
     height: 750px;
 }
 
-/* queries section productos */
+/* queries section caracteristicas */
 
 @media screen and (max-width: 1300px){
     .imagenCarrousel{
@@ -239,6 +242,8 @@ p{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    text-align: center;
+    gap: 3rem;
 }
 
 .banners-caracteristicas{
@@ -265,6 +270,34 @@ p{
 }
 
 /* FIN MAIN */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO FORMULARIO */
+/* estilos formularios */
+    #padre-formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #padre-formulario p:nth-child(1){
+        font-size: 12px;
+        margin-bottom: .2rem;
+    }
+
+    #padre-formulario h1{
+        margin-bottom: 1.5rem;
+    }
+
+    .formularioContacto{
+        text-align: start;
+        width: 50%;
+        margin-top: 2rem;
+    }
+
+/* FIN FORMULARIO */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 

@@ -35,6 +35,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav m-auto gap-2">
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
@@ -44,17 +45,18 @@
                         <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                     </div>
                 </div>
+                
                 <div class="navbar-nav ms-auto funcionesHeader">
-                    <a class="nav-link " href="./pages/galeria.html"><img src="./img/svg-search.svg" alt=""></a>
-                    <a class="nav-link" href="./pages/sobremi.html"><img src="./img/svg-user.svg" alt=""></a>
-                    <a class="nav-link" href="./pages/contacto.html"><img src="./img/svg-carrito.svg" alt=""></a>
-                </div>
+                    <a class="nav-link iconosAcciones" href="./pages/galeria.html"><img src="./img/svg-search.svg" alt=""></a>
+                    <a class="nav-link iconosAcciones" href="./pages/sobremi.html"><img src="./img/svg-user.svg" alt=""></a>
+                    <a class="nav-link iconosAcciones" href="./pages/contacto.html"><img src="./img/svg-carrito.svg" alt=""></a>
+                </div>     
             </div> 
         </nav>
     </header>
 
-    <!-- Section de las cards de producto -->
-    <section id="productos-grilla">
+    <!-- Section de las caracteristicas de la tienda -->
+    <section id="caracteristicas-grilla">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -114,28 +116,29 @@
         
     </section>
 
-    <section>
-        <div>
-            <form>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
+    <section id="formulario-grilla">
+        <div id="padre-formulario">
+            <p>CUALQUIER DUDA QUE TENGAS</p>
+            <h1>CONTÁCTANOS</h1>
+            <p>Completa el formulario y te responderemos a la brevedad</p>
+            <form class="formularioContacto">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label p-0">NOMBRE</label>
                         <input type="email" class="form-control" id="inputEmail3">
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label p-0">EMAIL</label>
                         <input type="password" class="form-control" id="inputPassword3">
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label for="inputTextArea3" class="col-sm-2 col-form-label">Consulta</label>
-                    <div class="col-sm-10">
-                        <textarea name="" id="" cols="30" rows="10" class="form-control" id="inputTextArea3"></textarea>
-                    </div>
+                <label for="inputTextArea3" class="col-sm-2 col-form-label mt-3">CONSULTA</label>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" id="inputTextArea3"></textarea>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-info w-100 mt-3 text-light fw-bold">ENVIAR</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </div>
     </section>
