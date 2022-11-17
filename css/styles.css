@@ -119,6 +119,16 @@ p{
 
 /* queries header */
 
+@media screen and (max-width: 992px){
+    .funcionesHeader{
+        flex-direction: row;
+    }
+    .botonColapsable{
+        margin-left: 0 !important;
+        order: -1;
+    }
+}
+
 @media screen and (max-width: 767px){
     #header-grilla{
         flex-direction: column;
