@@ -135,6 +135,23 @@ p{
     }
 }
 
+@media screen and (max-width: 520px){
+    .logo{
+        display: none;
+    }
+
+    nav{
+        height: 6rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .logo{
+        height: 3.5rem;
+        width: 9rem;
+    }
+}
+
 @media screen and (max-width: 399px){
     #navegacion-grilla{
         flex-direction: column;
