@@ -51,6 +51,7 @@ p{
 
     grid-template-areas: 
     "header header header" 
+    "breadcrumbs breadcrumbs breadcrumbs"
     "caracteristicas caracteristicas caracteristicas"
     "banner banner banner"
     "formulario formulario formulario"
@@ -67,6 +68,10 @@ p{
 /* header */
 #header-grilla{
     grid-area: header;
+}
+
+.breadcrumbs{
+    grid-area: breadcrumbs;
 }
 
 /* caracteristicas */
@@ -162,6 +167,21 @@ p{
 }
 /* FIN HEADER */
 
+
+.breadcrumb {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    width: max-content;
+}
+
+.paginaActual{
+    color: black;
+}
+
+.subPaginas{
+    color: grey;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 /* INICIO MAIN */
@@ -171,10 +191,14 @@ p{
     text-align: center;
 }
 
+#caracteristicas-grilla h1{
+    padding-top: 2rem;
+}
+
 .padre-cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; 
     justify-items: center;
 }
 
@@ -186,6 +210,20 @@ p{
     flex-direction: column; /* los elementos en columna */
     align-items: center; /* alineamos todos los elementos dentro de la card al centro */
     padding: 1rem; /* para separarlo de los bordes de la card */
+}
+
+.card-hijo-bootstrap{
+    cursor: pointer;
+    width: 18rem;
+    height: 30rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card-hijo-bootstrap img{
+    width: 15rem;
+    height: 15rem;
+    margin-top: 1rem;
 }
 
 .card-hijo img{
@@ -202,6 +240,20 @@ p{
 @media screen and (max-width: 1300px){
     .imagenCarrousel{
         height: 500px;
+    }
+}
+
+@media screen and (max-width: 1267px){
+    .padre-cards{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 950px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr);
+        
     }
 }
 
