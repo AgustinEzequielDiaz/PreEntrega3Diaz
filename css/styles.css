@@ -145,6 +145,11 @@ p{
     #header-grilla{
         flex-direction: column;
     }
+
+    .funcionesHeader a:nth-child(0)
+    {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 520px){
