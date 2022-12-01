@@ -1,7 +1,7 @@
 {
   "name": "proyecto-final-coderhouse-sass",
   "version": "1.0.0",
-  "description": "",
+  "description": "3er preEntrega del proyecto final de programacion web en CoderHouse, utilizando frameworks, preprocesadores, desarrolando el SEO, diseño responsive, scafolding y codigo prolijo y ordenado.",
   "main": "q",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
