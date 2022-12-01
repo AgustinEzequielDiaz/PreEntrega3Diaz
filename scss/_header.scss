@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/*  INICIO HEADER */
+/*  estilos header */
+#navegacion-grilla{
+    display: flex;
+    gap: .8rem;
+}
+
+.logo{
+    height: 5rem;
+    width: 13rem;
+}
+
+.funcionesHeader{
+    gap: 1rem;
+}
+
+.nombreEmpresa{
+    color: black;
+}
+
+#navbarNavAltMarkup div a:hover{
+    font-size: 1.2rem;
+}
+
+/* queries header */
+@media screen and (max-width: 992px){
+    .funcionesHeader{
+        flex-direction: row;
+        order: -1;
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #header-grilla{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .iconosAcciones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo{
+        width: 10rem;
+        height: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 399px){
+    #navegacion-grilla{
+        flex-direction: column;
+    }
+}
+/* FIN HEADER */

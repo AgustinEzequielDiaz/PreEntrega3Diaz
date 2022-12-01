@@ -1,0 +1,11 @@
+/* EJEMPLO DE MIXIN */
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Esto iria en la clase dentro del archivo de la page */
+.box {
+    @include flex-column-center;
+}

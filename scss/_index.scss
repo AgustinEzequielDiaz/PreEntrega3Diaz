@@ -1,0 +1,169 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO MAIN */
+
+.breadcrumb {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    width: max-content;
+}
+
+.paginaActual{
+    color: black;
+}
+
+.subPaginas{
+    color: grey;
+}
+
+/* estilos section caracteristicas */
+#caracteristicas-grilla h2{
+    text-align: center; 
+}
+
+#caracteristicas-grilla h1{
+    padding-top: 2rem;
+}
+
+.sectionProductos{
+    padding-bottom: 3rem;
+    text-align: center ;
+}
+
+.padre-cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; 
+    justify-items: center;
+}
+
+.card-hijo{
+    cursor: pointer;
+    width: 16rem;
+    border: solid 2px white;
+    display: flex; /* flex para poder centrar o acomodar todo a nuestro gusto */
+    flex-direction: column; /* los elementos en columna */
+    align-items: center; /* alineamos todos los elementos dentro de la card al centro */
+    padding: 1rem; /* para separarlo de los bordes de la card */
+}
+
+.card-hijo-bootstrap{
+    cursor: pointer;
+    width: 18rem;
+    height: 24rem; /* 24rem */
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #eaeaea;
+}
+
+.card-hijo-bootstrap img{
+    width: 15rem;
+    height: 13rem; /* 13rem */
+    margin-top: 1rem;
+}
+
+.card-hijo img{
+    width: 20rem;
+    height: 15rem;
+}
+
+.imagenCarrousel{
+    height: 750px;
+}
+
+.card-body{
+    font-size: 12px; 
+    text-align: start;
+}
+
+/* queries section caracteristicas */
+@media screen and (max-width: 1540px){
+    .padre-cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .imagenCarrousel{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1267px){
+    .padre-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 950px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 895px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr); /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */
+    }
+
+    .imagenCarrousel{
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .padre-cards{
+        display: flex; /* lo pasamos a flex en pantallas mas chicas porque no necesitamos acomodarlos en columnas sino uno abajo del otro */
+        flex-direction: column; /* y colocamos en columnas */
+        align-items: center;
+    }
+
+    .imagenCarrousel{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .imagenCarrousel{
+        height: 200px;
+    }
+}
+
+/* estilos section banner */
+#banner-grilla h2{
+    text-align: center;
+}
+
+.padre-banners{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.banners-caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+
+/* queries section banner */
+
+@media screen and (max-width: 992px){
+    .padre-banners{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px){
+    .padre-banners{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* FIN MAIN */

@@ -1,0 +1,71 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO SOBRE MI */
+/* estilos sobre mi */
+.sectionSobreMi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-sobremi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contenedor-sobremi img{
+    width: 600px;
+    height: 300px;
+}
+
+.contenedorCardPar{
+    flex-direction: row-reverse;
+    background-color: burlywood;
+    border-radius: .5rem;
+}
+
+.contenedorCardPar img{
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.contenedorCardImpar{
+    background-color: antiquewhite;
+    border-radius: .5rem;
+}
+
+.imgSobreMi{
+    min-height: -webkit-fill-available;
+    border-top-left-radius: .5rem ; 
+    border-bottom-left-radius: .5rem;
+}
+
+/* queries sobre mi */
+@media screen and (max-width: 992px) {
+    .contenedor-sobremi{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contenedor-sobremi img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .contenedor-sobremi p{
+        font-size: 12px;
+    }
+
+    .imgSobreMi{ 
+        border-top-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: 0;
+    }
+    
+}
+/* FIN SOBRE MI */

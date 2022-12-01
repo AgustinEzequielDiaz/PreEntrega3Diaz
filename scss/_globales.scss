@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 106px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+} 
+
+h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+/* ANIMACIONES */
+.botonEnviar span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+
+.botonEnviar .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+
+.botonEnviar svg {
+	color: #fff;
+	width: 35px;
+	height: 35px;
+}
+
+.botonEnviar:hover {
+	background: rgb(62, 124, 182);
+}
+
+.botonEnviar:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+.botonEnviar:hover span {
+	left: 20px;
+}

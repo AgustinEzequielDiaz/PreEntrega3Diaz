@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* grilla principal */
+#grilla-body{
+    display: grid;
+
+    grid-template-areas: 
+    "header header header" 
+    "breadcrumbs breadcrumbs breadcrumbs"
+    "caracteristicas caracteristicas caracteristicas"
+    "banner banner banner"
+    "formulario formulario formulario"
+    "footer footer footer";
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: $bg-body;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
+/* header */
+#header-grilla{
+    grid-area: header;
+}
+
+.breadcrumbs{
+    grid-area: breadcrumbs;
+}
+
+/* caracteristicas */
+#caracteristicas-grilla{
+    grid-area: caracteristicas;
+    background-color: cornsilk;
+}
+
+/* banner */
+#banner-grilla{
+    grid-area: banner;
+    background-color: #eaeaea;
+    margin-top: 1rem;
+    padding: 4rem;
+}
+
+/* formulario */
+#formulario-grilla{
+    grid-area: formulario;
+    margin-top: 2rem;
+}
+
+/* footer */
+#footer-grilla{
+    grid-area: footer;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 2rem;
+    /* margin-top: 2rem; */
+}
+/* FIN DE LA DEFINICIÓN DE ÁREAS */
