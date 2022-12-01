@@ -8,8 +8,7 @@
 }
 
 .logo{
-    height: 5rem;
-    width: 13rem;
+    @include sizes(13rem, 5rem);
 }
 
 .funcionesHeader{
@@ -17,7 +16,7 @@
 }
 
 .nombreEmpresa{
-    color: black;
+    color: $fuente-oscura;
 }
 
 #navbarNavAltMarkup div a:hover{
@@ -25,7 +24,7 @@
 }
 
 /* queries header */
-@media screen and (max-width: 992px){
+@media screen and (max-width: $pantalla-grande){
     .funcionesHeader{
         flex-direction: row;
         order: -1;
@@ -33,7 +32,7 @@
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: $pantalla-mediana){
     #header-grilla{
         flex-direction: column;
     }
@@ -44,13 +43,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 25px;
-        height: 25px;
+        @include sizes(25px, 25px);
     }
 
     .logo{
-        width: 10rem;
-        height: 4.5rem;
+        @include sizes(10rem, 4.5rem);
     }
 }
 

@@ -1,11 +1,47 @@
-/* EJEMPLO DE MIXIN */
-@mixin flex-column-center {
+
+@mixin flex-column-justify-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Esto iria en la clase dentro del archivo de la page */
-.box {
-    @include flex-column-center;
+@mixin flex-column-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin sizes($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin font($family, $size, $weight){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin grid-column-row-start($row, $column){
+    grid-row-start: span $row;
+    grid-column-start: span $column;
+}
+
+@mixin radios-componente($bottom-left, $top-left, $top-rigth, $top-bottom){
+    border-bottom-left-radius: $bottom-left;
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-rigth;
+    border-bottom-right-radius: $top-bottom;
 }

@@ -1,18 +1,18 @@
 /* Variables para colores */
-$bg-body: white;
+$bg-light: white;
 $color-primario: lightblue;
 $color-secundario: lightgreen;
 
 /* Fuentes */
-$fuente-grande: 3rem;
-$fuente-chica: 1rem;
-$fuente-titulos: 'Roboto', sans-serif; /* fuente google */
-$fuente-clara: #fff;
+$fuente-clara: grey;
+$fuente-oscura: black;
+$fuente-roboto: 'Roboto', sans-serif;
 
-/* Imagenes */
-$bg-imagen: url(...);
+/* Tamaño */
+
 
 /* Tamaños @mediaqueries */
+$pantalla-xxl:1540px;
 $pantalla-xl: 1200px;
 $pantalla-grande: 992px;
 $pantalla-mediana: 768px;

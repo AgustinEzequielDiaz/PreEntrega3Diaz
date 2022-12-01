@@ -3,34 +3,26 @@
 /* INICIO SOBRE MI */
 /* estilos sobre mi */
 .sectionSobreMi{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-align-center;
 }
 
 .contenedor-sobremi{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-align-center;
     gap: 30px;
-}
 
-.contenedor-sobremi img{
-    width: 600px;
-    height: 300px;
+    img{
+        @include sizes(600px, 300px);
+    }
 }
 
 .contenedorCardPar{
     flex-direction: row-reverse;
     background-color: burlywood;
     border-radius: .5rem;
-}
 
-.contenedorCardPar img{
-    border-top-left-radius: .5rem;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    img{
+        @include radios-componente(0, .5rem, .5rem, .5rem);
+    }
 }
 
 .contenedorCardImpar{
@@ -40,8 +32,7 @@
 
 .imgSobreMi{
     min-height: -webkit-fill-available;
-    border-top-left-radius: .5rem ; 
-    border-bottom-left-radius: .5rem;
+    @include radios-componente(.5rem, .5rem, 0rem, 0rem);
 }
 
 /* queries sobre mi */
@@ -52,19 +43,19 @@
 }
 
 @media screen and (max-width: 767px) {
-    .contenedor-sobremi img{
-        width: 300px;
-        height: 250px;
-    }
+    .contenedor-sobremi {
+        img{
+            width: 300px;
+            height: 250px;
+        }
 
-    .contenedor-sobremi p{
-        font-size: 12px;
+        p{
+            font-size: 12px;
+        }
     }
 
     .imgSobreMi{ 
-        border-top-right-radius: .5rem;
-        border-top-left-radius: .5rem;
-        border-bottom-left-radius: 0;
+        @include radios-componente(0, .5rem, .5rem, 0rem);
     }
     
 }

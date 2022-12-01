@@ -1,463 +1,559 @@
 @charset "UTF-8";
-/* Variables para colores */
-/* Fuentes */
-/* tamaños mediaqueries */
+
 * {
-  box-sizing: border-box; }
+    box-sizing: border-box;
+}
 
 html {
-  scroll-behavior: smooth; }
+    scroll-behavior: smooth;
+}
 
 body {
-  padding-top: 106px; }
+    padding-top: 106px;
+}
 
 a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400; }
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
 
 ul {
-  list-style: none; }
+    list-style: none;
+}
 
 img {
-  max-width: 100%; }
+    max-width: 100%;
+}
 
 h1 {
-  text-align: center;
-  font-family: 'Roboto', sans-serif; }
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
 
 h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400; }
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
 
 h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500; }
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
 
 p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300; }
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+/* ANIMACIONES */
+.botonEnviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background: #141414;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.botonEnviar span {
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 40%;
+}
+
+.botonEnviar .icono {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: -40px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+}
+
+.botonEnviar svg {
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+
+.botonEnviar:hover {
+    background: #3e7cb6;
+}
+
+.botonEnviar:hover .icono {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+.botonEnviar:hover span {
+    left: 20px;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /* grilla principal */
 #grilla-body {
-  display: grid;
-  grid-template-areas: "header header header"  "breadcrumbs breadcrumbs breadcrumbs" "caracteristicas caracteristicas caracteristicas" "banner banner banner" "formulario formulario formulario" "footer footer footer";
-  grid-template-columns: repeat(3, 1fr);
-  background-color: white; }
+    display: grid;
+    grid-template-areas: "header header header"
+        "caracteristicas caracteristicas caracteristicas"
+        "banner banner banner"
+        "formulario formulario formulario"
+        "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /* INICIO DEFINICIÓN LAS ÁREAS DEL grid-template-areas */
 /* header */
 #header-grilla {
-  grid-area: header; }
-
-.breadcrumbs {
-  grid-area: breadcrumbs; }
+    grid-area: header;
+}
 
 /* caracteristicas */
 #caracteristicas-grilla {
-  grid-area: caracteristicas;
-  background-color: cornsilk; }
+    grid-area: caracteristicas;
+    background-color: cornsilk;
+}
+
+#caracteristicas-grilla h1 {
+    padding-top: 2rem;
+}
+
+#caracteristicas-grilla h2 {
+    text-align: center;
+}
 
 /* banner */
 #banner-grilla {
-  grid-area: banner;
-  background-color: #eaeaea;
-  margin-top: 1rem;
-  padding: 4rem; }
+    grid-area: banner;
+    background-color: #eaeaea;
+    margin-top: 1rem;
+    padding: 4rem;
+}
+
+#banner-grilla h2 {
+    text-align: center;
+}
 
 /* formulario */
 #formulario-grilla {
-  grid-area: formulario;
-  margin-top: 2rem; }
+    grid-area: formulario;
+    margin-top: 2rem;
+}
 
 /* footer */
 #footer-grilla {
-  grid-area: footer;
-  text-align: center;
-  background-color: #eaeaea;
-  padding: 2rem;
-  /* margin-top: 2rem; */ }
+    grid-area: footer;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 2rem;
+    /* margin-top: 2rem; */
+}
 
 /* FIN DE LA DEFINICIÓN DE ÁREAS */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /*  INICIO HEADER */
 /*  estilos header */
 #navegacion-grilla {
-  display: flex;
-  gap: .8rem; }
+    display: flex;
+    gap: .8rem;
+}
 
 .logo {
-  height: 5rem;
-  width: 13rem; }
+    width: 13rem;
+    height: 5rem;
+}
 
 .funcionesHeader {
-  gap: 1rem; }
+    gap: 1rem;
+}
 
 .nombreEmpresa {
-  color: black; }
+    color: black;
+}
 
 #navbarNavAltMarkup div a:hover {
-  font-size: 1.2rem; }
+    font-size: 1.2rem;
+}
 
 /* queries header */
 @media screen and (max-width: 992px) {
-  .funcionesHeader {
-    flex-direction: row;
-    order: -1;
-    margin-left: 0 !important; } }
+    .funcionesHeader {
+        flex-direction: row;
+        order: -1;
+        margin-left: 0 !important;
+    }
+}
 
-@media screen and (max-width: 767px) {
-  #header-grilla {
-    flex-direction: column; } }
+@media screen and (max-width: 768px) {
+    #header-grilla {
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 520px) {
-  .iconosAcciones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px; }
-  .logo {
-    width: 10rem;
-    height: 4.5rem; } }
+    .iconosAcciones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo {
+        width: 10rem;
+        height: 4.5rem;
+    }
+}
 
 @media screen and (max-width: 399px) {
-  #navegacion-grilla {
-    flex-direction: column; } }
+    #navegacion-grilla {
+        flex-direction: column;
+    }
+}
 
 /* FIN HEADER */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* INICIO MAIN */
-.breadcrumb {
-  margin-left: 1rem;
-  margin-top: .5rem;
-  width: max-content; }
 
-.paginaActual {
-  color: black; }
-
-.subPaginas {
-  color: grey; }
-
+/* INICIO INDEX */
 /* estilos section caracteristicas */
-#caracteristicas-grilla h2 {
-  text-align: center; }
-
-#caracteristicas-grilla h1 {
-  padding-top: 2rem; }
-
-.sectionProductos {
-  padding-bottom: 3rem;
-  text-align: center; }
-
-.padre-cards {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  justify-items: center; }
-
-.card-hijo {
-  cursor: pointer;
-  width: 16rem;
-  border: solid 2px white;
-  display: flex;
-  /* flex para poder centrar o acomodar todo a nuestro gusto */
-  flex-direction: column;
-  /* los elementos en columna */
-  align-items: center;
-  /* alineamos todos los elementos dentro de la card al centro */
-  padding: 1rem;
-  /* para separarlo de los bordes de la card */ }
-
-.card-hijo-bootstrap {
-  cursor: pointer;
-  width: 18rem;
-  height: 24rem;
-  /* 24rem */
-  align-items: center;
-  margin-top: 2rem;
-  background-color: #eaeaea; }
-
-.card-hijo-bootstrap img {
-  width: 15rem;
-  height: 13rem;
-  /* 13rem */
-  margin-top: 1rem; }
-
-.card-hijo img {
-  width: 20rem;
-  height: 15rem; }
-
 .imagenCarrousel {
-  height: 750px; }
-
-.card-body {
-  font-size: 12px;
-  text-align: start; }
+    height: 750px;
+}
 
 /* queries section caracteristicas */
-@media screen and (max-width: 1540px) {
-  .padre-cards {
-    grid-template-columns: repeat(4, 1fr); } }
-
 @media screen and (max-width: 1300px) {
-  .imagenCarrousel {
-    height: 500px; } }
-
-@media screen and (max-width: 1267px) {
-  .padre-cards {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media screen and (max-width: 950px) {
-  .padre-cards {
-    grid-template-columns: repeat(2, 1fr); } }
+    .imagenCarrousel {
+        height: 500px;
+    }
+}
 
 @media screen and (max-width: 895px) {
-  .padre-cards {
-    grid-template-columns: repeat(2, 1fr);
-    /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */ }
-  .imagenCarrousel {
-    height: 550px; } }
+    .imagenCarrousel {
+        height: 550px;
+    }
+}
 
-@media screen and (max-width: 767px) {
-  .padre-cards {
-    display: flex;
-    /* lo pasamos a flex en pantallas mas chicas porque no necesitamos acomodarlos en columnas sino uno abajo del otro */
-    flex-direction: column;
-    /* y colocamos en columnas */
-    align-items: center; }
-  .imagenCarrousel {
-    height: 350px; } }
+@media screen and (max-width: 768px) {
+    .imagenCarrousel {
+        height: 350px;
+    }
+}
 
 @media screen and (max-width: 450px) {
-  .imagenCarrousel {
-    height: 200px; } }
+    .imagenCarrousel {
+        height: 200px;
+    }
+}
 
 /* estilos section banner */
-#banner-grilla h2 {
-  text-align: center; }
-
 .padre-banners {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  text-align: center;
-  gap: 3rem; }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 3rem;
+}
 
 .banners-caracteristicas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .2rem; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
 
 /* queries section banner */
 @media screen and (max-width: 992px) {
-  .padre-banners {
-    grid-template-columns: repeat(2, 1fr); } }
+    .padre-banners {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media screen and (max-width: 767px) {
-  .padre-banners {
-    display: flex;
-    flex-direction: column;
-    align-items: center; } }
+    .padre-banners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-/* FIN MAIN */
+/* FIN INDEX */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /* INICIO FORMULARIO */
 /* estilos formularios */
 #padre-formulario {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem; }
-
-#padre-formulario p:nth-child(1) {
-  font-size: 12px;
-  margin-bottom: .2rem; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
 
 #padre-formulario h1 {
-  margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+}
+
+#padre-formulario p:nth-child(1) {
+    font-size: 12px;
+    margin-bottom: .2rem;
+}
 
 .formularioContacto {
-  text-align: start;
-  width: 50%;
-  margin-top: 2rem; }
-
-.botonEnviar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  background: #141414;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: .3s ease all;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden; }
+    text-align: start;
+    width: 50%;
+    margin-top: 2rem;
+}
 
 /* FIN FORMULARIO */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /* INICIO GALERIA */
 /* estilos section galeria */
 #galeria-grilla {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 300px;
-  padding: 20px;
-  grid-gap: 10px; }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    padding: 20px;
+    grid-gap: 10px;
+}
 
 .imagenGaleria {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-.itemGaleria:nth-child() {
-  grid-column-start: span 2;
-  grid-row-start: span 2; }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .itemGaleria:nth-child(4) {
-  grid-column-start: span 2;
-  grid-row-start: span 2; }
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
 
 .itemGaleria:nth-child(8) {
-  grid-column-start: span 2;
-  grid-row-start: span 2; }
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
 
 .itemGaleria:nth-child(10) {
-  grid-row-start: span 2; }
+    grid-row-start: span 2;
+    grid-column-start: span 0;
+}
 
 .itemGaleria:nth-child(11) {
-  grid-row-start: span 2; }
+    grid-row-start: span 2;
+    grid-column-start: span 0;
+}
 
 .itemGaleria:nth-child(12) {
-  grid-row-start: span 2; }
+    grid-row-start: span 2;
+    grid-column-start: span 0;
+}
 
 /* queries section galeria */
 @media screen and (max-width: 1200px) {
-  #galeria-grilla {
-    grid-template-columns: repeat(2, 1fr); }
-  .itemGaleria:nth-child(2) {
-    grid-row-start: span 2; }
-  .itemGaleria:nth-child(5) {
-    grid-row-start: span 2; }
-  .itemGaleria:nth-child(8) {
-    grid-row-start: span 2;
-    grid-column-start: span 2; }
-  .itemGaleria:nth-child(9) {
-    grid-row-start: span 2;
-    grid-column-start: span 1; }
-  .itemGaleria:nth-child(10) {
-    grid-row-start: span 3; }
-  .itemGaleria:nth-child(11) {
-    grid-row-start: span 2; } }
+    #galeria-grilla {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-@media screen and (max-width: 767px) {
-  #galeria-grilla {
-    display: flex;
-    flex-direction: column; } }
+    #galeria-grilla:nth-child(2) {
+        grid-row-start: span 2;
+        grid-column-start: span 0;
+    }
+
+    #galeria-grilla:nth-child(5) {
+        grid-row-start: span 2;
+        grid-column-start: span 0;
+    }
+
+    #galeria-grilla:nth-child(8) {
+        grid-row-start: span 2;
+        grid-column-start: span 2;
+    }
+
+    #galeria-grilla:nth-child(9) {
+        grid-row-start: span 2;
+        grid-column-start: span 1;
+    }
+
+    #galeria-grilla:nth-child(10) {
+        grid-row-start: span 3;
+        grid-column-start: span 0;
+    }
+
+    #galeria-grilla:nth-child(11) {
+        grid-row-start: span 2;
+        grid-column-start: span 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #galeria-grilla {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* FIN GALERIA */
+.card-body {
+    font-size: 12px;
+    text-align: start;
+}
+
+.sectionProductos {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.padre-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.card-hijo-bootstrap {
+    cursor: pointer;
+    width: 18rem;
+    height: 24rem;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #eaeaea;
+}
+
+.card-hijo-bootstrap img {
+    width: 15rem;
+    height: 13rem;
+    margin-top: 1rem;
+}
+
+/* media queries productos */
+@media screen and (max-width: 1540px) {
+    .padre-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1267px) {
+    .padre-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .padre-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .padre-cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padre-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 /* INICIO SOBRE MI */
 /* estilos sobre mi */
 .sectionSobreMi {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .contenedor-sobremi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
 
 .contenedor-sobremi img {
-  width: 600px;
-  height: 300px; }
+    width: 600px;
+    height: 300px;
+}
 
 .contenedorCardPar {
-  flex-direction: row-reverse;
-  background-color: burlywood;
-  border-radius: .5rem; }
+    flex-direction: row-reverse;
+    background-color: burlywood;
+    border-radius: .5rem;
+}
 
 .contenedorCardPar img {
-  border-top-left-radius: .5rem;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: .5rem;
-  border-bottom-right-radius: .5rem; }
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
 
 .contenedorCardImpar {
-  background-color: antiquewhite;
-  border-radius: .5rem; }
+    background-color: antiquewhite;
+    border-radius: .5rem;
+}
 
 .imgSobreMi {
-  min-height: -webkit-fill-available;
-  border-top-left-radius: .5rem;
-  border-bottom-left-radius: .5rem; }
+    min-height: -webkit-fill-available;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
 
 /* queries sobre mi */
 @media screen and (max-width: 992px) {
-  .contenedor-sobremi {
-    flex-direction: row; } }
+    .contenedor-sobremi {
+        flex-direction: row;
+    }
+}
 
 @media screen and (max-width: 767px) {
-  .contenedor-sobremi img {
-    width: 300px;
-    height: 250px; }
-  .contenedor-sobremi p {
-    font-size: 12px; }
-  .imgSobreMi {
-    border-top-right-radius: .5rem;
-    border-top-left-radius: .5rem;
-    border-bottom-left-radius: 0; } }
+    .contenedor-sobremi img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .contenedor-sobremi p {
+        font-size: 12px;
+    }
+
+    .imgSobreMi {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0rem;
+    }
+}
 
 /* FIN SOBRE MI */
-/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* INICIO FOOTER */
-/* estilos footer */
-/* queries footer */
-/* FIN FOOTER */
-/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* INICIO MODIFICACION CSS BOOTSTRAP */
-/* FIN MODIFICACION CSS BOOTSTRAP */
-/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* ANIMACIONES */
-.botonEnviar span {
-  transition: .4s ease-in-out all;
-  position: absolute;
-  left: 40%; }
-
-.botonEnviar .icono {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  left: -40px;
-  transition: .3s ease-in-out all;
-  opacity: 0; }
-
-.botonEnviar svg {
-  color: #fff;
-  width: 35px;
-  height: 35px; }
-
-.botonEnviar:hover {
-  background: #3e7cb6; }
-
-.botonEnviar:hover .icono {
-  left: calc(100% - 50px);
-  opacity: 1; }
-
-.botonEnviar:hover span {
-  left: 20px; }

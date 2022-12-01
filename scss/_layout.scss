@@ -5,8 +5,7 @@
     display: grid;
 
     grid-template-areas: 
-    "header header header" 
-    "breadcrumbs breadcrumbs breadcrumbs"
+    "header header header"
     "caracteristicas caracteristicas caracteristicas"
     "banner banner banner"
     "formulario formulario formulario"
@@ -14,7 +13,7 @@
 
     grid-template-columns: repeat(3, 1fr);
 
-    background-color: $bg-body;
+    background-color: $bg-light;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -25,14 +24,19 @@
     grid-area: header;
 }
 
-.breadcrumbs{
-    grid-area: breadcrumbs;
-}
-
 /* caracteristicas */
 #caracteristicas-grilla{
     grid-area: caracteristicas;
     background-color: cornsilk;
+
+    h1{
+        padding-top: 2rem;
+    }
+
+    h2{
+        text-align: center; 
+    }
+    
 }
 
 /* banner */
@@ -41,6 +45,10 @@
     background-color: #eaeaea;
     margin-top: 1rem;
     padding: 4rem;
+    
+    h2{
+        text-align: center;
+    }
 }
 
 /* formulario */

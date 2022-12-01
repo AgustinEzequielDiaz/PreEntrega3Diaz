@@ -1,0 +1,61 @@
+.card-body{
+    font-size: 12px; 
+    text-align: start;
+}
+
+.sectionProductos{
+    padding-bottom: 3rem;
+    text-align: center ;
+}
+
+.padre-cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; 
+    justify-items: center;
+}
+
+.card-hijo-bootstrap{
+    cursor: pointer;
+    @include sizes(18rem, 24rem);
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #eaeaea;
+
+    img{
+        @include sizes(15rem, 13rem);
+        margin-top: 1rem;
+    }
+}
+
+/* media queries productos */
+@media screen and (max-width: $pantalla-xxl){
+    .padre-cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1267px){
+    .padre-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 950px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 895px){
+    .padre-cards{
+        grid-template-columns: repeat(2, 1fr); /* en vez de 3 cards, hacemos que se muestren dos para que no se aplasten las 3 */
+    }
+}
+
+@media screen and (max-width: $pantalla-mediana){
+    .padre-cards{
+        @include flex-column-align-center;
+    }
+}

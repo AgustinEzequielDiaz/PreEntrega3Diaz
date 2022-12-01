@@ -12,8 +12,8 @@ body{
 
 a{
     text-decoration: none;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    color: $bg-light;
+    font-family: $fuente-roboto;
     font-weight: 400;
 }
 
@@ -27,58 +27,75 @@ img{
 
 h1{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuente-roboto
 }
 
 h2{
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuente-roboto;
     font-weight: 400;
 }
 
 h3{
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuente-roboto;
     font-weight: 500;
 }
 
 p{
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuente-roboto;
     font-weight: 300;
 }
 
 /* ------------------------------------------------------------------------------------------- */
 
 /* ANIMACIONES */
-.botonEnviar span {
-	transition: .4s ease-in-out all;
-	position: absolute;
-	left: 40%;
-}
 
-.botonEnviar .icono {
-	display: flex;
-	align-items: center;
-	position: absolute;
-	z-index: 2;
-	left: -40px;
-	transition: .3s ease-in-out all;
-	opacity: 0;
-}
+.botonEnviar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include sizes(100%, 80px);
+    background: #141414;
+    color: $bg-light;
+    @include font($fuente-roboto, 20px, 500);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 
-.botonEnviar svg {
-	color: #fff;
-	width: 35px;
-	height: 35px;
-}
+    span {
+        transition: .4s ease-in-out all;
+        position: absolute;
+        left: 40%;
+    }
 
-.botonEnviar:hover {
-	background: rgb(62, 124, 182);
-}
+    .icono {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        left: -40px;
+        transition: .3s ease-in-out all;
+        opacity: 0;
+    }
 
-.botonEnviar:hover .icono {
-	left: calc(100% - 50px);
-	opacity: 1;
-}
+    svg {
+        color: $bg-light;
+        @include sizes(35px, 35px);
+    }
+    
+    &:hover {
+        background: rgb(62, 124, 182);
+    }
 
-.botonEnviar:hover span {
-	left: 20px;
+    &:hover .icono {
+        left: calc(100% - 50px);
+        opacity: 1;
+    }
+
+    &:hover span {
+        left: 20px;
+    }
 }
