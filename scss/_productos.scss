@@ -28,6 +28,12 @@
     }
 }
 
+.btn-primary{
+    background-color: rgb(68, 216, 68);
+    border-color: rgb(68, 216, 68);
+    font-weight: 400;
+}
+
 /* media queries productos */
 @media screen and (max-width: $pantalla-xxl){
     .padre-cards{
