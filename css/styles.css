@@ -184,9 +184,6 @@ p {
 .imagenCarrousel {
   height: 750px; }
 
-.formulario-index {
-  background-image: none; }
-
 /* queries section caracteristicas */
 @media screen and (max-width: 1300px) {
   .imagenCarrousel {
