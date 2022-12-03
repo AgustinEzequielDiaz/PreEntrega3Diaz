@@ -184,6 +184,10 @@ p {
 .imagenCarrousel {
   height: 750px; }
 
+.row:has(input:required) label:after {
+  content: " *";
+  color: red; }
+
 /* queries section caracteristicas */
 @media screen and (max-width: 1300px) {
   .imagenCarrousel {
@@ -247,6 +251,10 @@ p {
   text-align: start;
   width: 50%;
   margin-top: 2rem; }
+
+.row:has(input:required) label:after {
+  content: " *";
+  color: red; }
 
 /* FIN FORMULARIO */
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */

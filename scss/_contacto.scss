@@ -24,4 +24,9 @@
     margin-top: 2rem;
 }
 
+.row:has(input:required) label:after {
+    content: " *";
+    color: red;
+}
+
 /* FIN FORMULARIO */
