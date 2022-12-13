@@ -252,6 +252,15 @@ p {
   width: 50%;
   margin-top: 2rem; }
 
+.btnPrueba {
+  border-color: transparent;
+  width: 10rem;
+  height: 10rem;
+  border-color: none;
+  border-radius: 60px;
+  background: #ffffff;
+  box-shadow: 25px 25px 50px #cccccc, -25px -25px 50px #ffffff; }
+
 .row:has(input:required) label:after {
   content: " *";
   color: red; }
